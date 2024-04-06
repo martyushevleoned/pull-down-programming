@@ -26,7 +26,12 @@ public class MainTask2 {
      * на любом, заранее определённом транспорте
      */
     public static void moveTo(Person person, Position destination) {
-        // TODO
+
+        Transport transport = new Metro();
+        person.walk(transport.getPosition());
+        transport.moveTo(person, destination);
+        person.walk(destination);
+
         assert person.getPosition() == destination;
     }
 }
